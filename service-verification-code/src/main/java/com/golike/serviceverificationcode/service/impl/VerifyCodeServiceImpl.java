@@ -47,13 +47,13 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
         String keyPre = generateKeyPreByIdentity(identity);
         String key = keyPre + phoneNumber;
         //存redis，2分钟过期
-//        BoundValueOperations<String, String> codeRedis = redisTemplate.boundValueOps(key);
+        BoundValueOperations<String, String> codeRedis = redisTemplate.boundValueOps(key);
 
 //        Boolean aBoolean = codeRedis.setIfAbsent(code);
 //        if (aBoolean){
 //            codeRedis.expire(2,TimeUnit.MINUTES);
 //        }
-//        codeRedis.set(code,2,TimeUnit.MINUTES);
+        codeRedis.set(code,2,TimeUnit.MINUTES);
 //        codeRedis.expire(2,TimeUnit.MINUTES);
 
         //返回

@@ -9,4 +9,11 @@ spring:
   application:
     name: service-verification-code
 
+  redis:
+    host: 124.70.179.197
+    port: 6379
+    password: zhiwei123
+
+
+
 
