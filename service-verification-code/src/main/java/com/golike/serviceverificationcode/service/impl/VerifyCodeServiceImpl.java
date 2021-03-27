@@ -52,6 +52,8 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 //        Boolean aBoolean = codeRedis.setIfAbsent(code);
 //        if (aBoolean){
 //            codeRedis.expire(2,TimeUnit.MINUTES);
+//        }else {
+//            System.out.println("已存在");
 //        }
         codeRedis.set(code,2,TimeUnit.MINUTES);
 //        codeRedis.expire(2,TimeUnit.MINUTES);

@@ -30,10 +30,10 @@ eureka:
     hostname: eureka-7900
   client:
     register-with-eureka: false
-    fetch-registry: true
+    fetch-registry: false
     service-url:
       # 5 24
-      defaultZone: http://eureka-7900:7902/eureka/
+      defaultZone: http://eureka-7900:7900/eureka/
 
 ---
 spring:
